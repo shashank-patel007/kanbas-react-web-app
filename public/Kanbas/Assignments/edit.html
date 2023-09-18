@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Edit</title>
+</head>
+<body>
+    <table>
+        <tr valign="baseline">
+            <!-- First Column - Kanbas Navigation -->
+            <td>
+                <ul>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Inbox</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Studio</a></li>
+                    <li><a href="#">Commons</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </td>
+
+            <!-- Second Column - Course Navigation -->
+            <td>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="#">Zoom Meetings</a></li>
+                    <li><a href="#">Assignments</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="#">Grades</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Panopto Video</a></li>
+                    <li><a href="#">Discussions</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Rubrics</a></li>
+                    <li><a href="#">Outcomes</a></li>
+                    <li><a href="#">Collaborations</a></li>
+                    <li><a href="#">Syllabus</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </td>
+
+            <!-- Third Column - Course Content -->
+            <td>
+                <table>
+                    <tr>
+                        <select>
+                            <option value="">Speed Grader</option>
+                        </select>
+                        <hr>       
+                    </tr>
+                    <td><h4>Assignment Name</h4></td>
+                    <tr>
+                        <td>
+                            <input type="text" id="search" value="A1 - ENV + HTML">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br>
+                            <textarea type="text" role="textbox" rows="2" cols="30">This is the assignment description.</textarea>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br>
+                            <label>Points</label>
+                            <br>
+                            <input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br>
+                            <label>Assignment Group</label>
+                            <br>
+                            <select>
+                                <option value="">ASSIGNMENTS</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br>
+                            <label>Display Grade as</label>
+                            <br>
+                            <select>
+                                <option value="">Percentage</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br>
+                            <label>Submission Type</label>
+                            <br>
+                            <select>
+                                <option value="">Online</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br>
+                            <label>Online Entry Options</label>
+                            <br>
+                            <input type="checkbox" id="text_entry">
+                            <label for="text_entry">Text Entry</label>
+                            <br>
+                            <input type="checkbox" id="website_url">
+                            <label for="text_entry">Website URL</label>
+                            <br>
+                            <input type="checkbox" id="media_recordings">
+                            <label for="text_entry">Media Recordings</label>
+                            <br>
+                            <input type="checkbox" id="student_annotation">
+                            <label for="text_entry">Student Annotation</label>
+                            <br>
+                            <input type="checkbox" id="file_uploads">
+                            <label for="text_entry">File Uploads</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br>
+                            <label>Submission Attempts</label>
+                            <br>
+                            <select>
+                                <option value="">Unlimited</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br>
+                            <label>Plagiarism Review</label>
+                            <br>
+                            <select>
+                                <option value="">None</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br>
+                            <label>Group Assignment</label>
+                            <br>
+                            <input type="checkbox" id="group_asssignment">
+                            <label for="group_asssignment">This is a group assignment</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br>
+                            <label>Peer Reviews</label>
+                            <br>
+                            <input type="checkbox" id="peer_review">
+                            <label for="peer_review">Require Peer Reviews</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br>
+                            <label>Assign</label>
+                            <label>Assign to</label>
+                            <br>
+                            <input value="Everyone">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br>
+                            <label for="available">Due</label>
+                            <br>
+                            <input type="date" id="available" name="available" value="2021-01-01">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br>
+                            <label for="until">Until</label>
+                            <br>
+                            <input type="date" id="until" name="until" value="2021-01-01">
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br>
+                            <button>Cancel</button>
+                            <button>Save</button>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
