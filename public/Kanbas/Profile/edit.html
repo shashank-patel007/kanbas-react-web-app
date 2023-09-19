@@ -11,9 +11,9 @@
             <!-- First Column - Kanbas Navigation -->
             <td>
                 <ul>
-                    <li><a href="#">Account</a></li>
+                    <li><a href="../KanbasNavigation/account.html">Account</a></li>
                     <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Courses</a></li>
+                    <li><a href="../KanbasNavigation/courses.html">Courses</a></li>
                     <li><a href="#">Calendar</a></li>
                     <li><a href="#">Inbox</a></li>
                     <li><a href="#">History</a></li>
@@ -27,7 +27,7 @@
             <td>
                 <ul>
                     <li><a href="#">Notifications</a></li>
-                    <li><a href="#">Profile</a></li>
+                    <li><a href="index.html">Profile</a></li>
                     <li><a href="#">Files</a></li>
                     <li><a href="#">Settings</a></li>
                     <li><a href="#">ePortfolios</a></li>
@@ -88,14 +88,18 @@
                     </tr>
                     <tr>
                         <td>
-                            <button>Cancel</button>
-                            <button>Save Profile</button>
+                            <form id="save" action="index.html">
+                                <button>Cancel</button>
+                                <button>Save Profile</button>
+                            </form>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <button>Edit Profile</button>
-                            <button>Cancel Editing</button>
+                            <form id="cancel" action="index.html">
+                                <button>Edit Profile</button>
+                                <button type="submit">Cancel Editing</button>
+                            </form>
                         </td>
                     </tr>
                 </table>
