@@ -3,165 +3,424 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignments</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" />
+    <title>Account Navigation Page</title>
 </head>
 <body>
-    <table>
-        <tr valign="baseline">
-            <!-- First Column - Kanbas Navigation -->
-            <td>
-                <ul>
-                    <li><a href="../../KanbasNavigation/account.html">Account</a></li>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="../../KanbasNavigation/courses.html">Courses</a></li>
-                    <li><a href="#">Calendar</a></li>
-                    <li><a href="#">Inbox</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Studio</a></li>
-                    <li><a href="#">Commons</a></li>
-                    <li><a href="#">Help</a></li>
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar">
+                <div class="sidebar-logo">
+                    <img src="../../../images/northeastern.jpg" alt="Company Logo" width="80">
+                </div>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../KanbasNavigation/account.html">
+                            <i class="fas fa-user-circle"></i>
+                            <span class="text-danger">Account</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../Dashboard/dashboard.html">
+                            <i class="fas fa-tachometer-alt text-danger"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../../KanbasNavigation/courses.html">
+                            <i class="fas fa-book text-danger"></i>
+                            Courses
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-calendar-alt text-danger"></i>
+                            Calendar
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-envelope-open-text text-danger"></i>
+                            Inbox
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="far fa-clock text-danger"></i>
+                            History
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-tv text-danger"></i>
+                            Studio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-arrow-circle-right text-danger"></i>
+                            Commons
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-question-circle text-danger"></i>
+                            Help
+                        </a>
+                    </li>
                 </ul>
-            </td>
-
-            <!-- Second Column - Course Navigation -->
-            <td>
-                <ul>
-                    <li><a href="../Home/home.html">Home</a></li>
-                    <li><a href="#">Modules</a></li>
-                    <li><a href="#">Piazza</a></li>
-                    <li><a href="#">Zoom Meetings</a></li>
-                    <li><a href="../Assignments/index.html">Assignments</a></li>
-                    <li><a href="#">Quizzes</a></li>
-                    <li><a href="../Grades/grades.html">Grades</a></li>
-                    <li><a href="#">People</a></li>
-                    <li><a href="#">Panopto Video</a></li>
-                    <li><a href="#">Discussions</a></li>
-                    <li><a href="#">Announcements</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li><a href="#">Files</a></li>
-                    <li><a href="#">Rubrics</a></li>
-                    <li><a href="#">Outcomes</a></li>
-                    <li><a href="#">Collaborations</a></li>
-                    <li><a href="#">Syllabus</a></li>
-                    <li><a href="../Settings/course_details.html">Settings</a></li>
-                </ul>
-            </td>
-
-            <!-- Third Column - Course Content -->
-            <td>
-                <table>
-                    <tr valign="baseline">
-                        <input type="text" id="search" placeholder="Search for Assignments">
-                        <button>Group</button>
-                        <button>Assignment</button>
-                        <select>
-                            <option value="" disabled selected>Edit Assignments Dates</option>
-                        </select>
-                    </tr>
+            </nav>
+            <main role="main" class="col-md-12 ml-sm-auto col-lg-12 px-md-4">
+                <div class="content-wrapper">
+                    <div class="top-section">
+                        <div class="menu-icon">
+                            <i class="fas fa-bars text-danger"></i>
+                        </div>
+                        <div class="profile-name">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#" class="text-danger" style="text-decoration: none;">CS5610.12631.202410</a></li>
+                                    <li class="breadcrumb-item"><a href="#" class="text-danger" style="text-decoration: none;">Term</a></li>
+                                    <li class="breadcrumb-item"><a href="#" class="text-danger" style="text-decoration: none;">Section</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Assignments</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
                     <hr>
-                    <tr valign="baseline">
-                        <table>
-                            <tr valign="baseline">
-                                <th>
-                                    ASSIGNMENTS 40% of Total
-                                </th>
-                                <td>
-                                    <select>
-                                        <option value="">Edit</option>
-                                        <option value="">Speed Grader</option>
-                                        <option value="">Duplicate</option>
-                                        <option value="">Delete</option>
-                                        <option value="">Move to...</option>
-                                        <option value="">Send to..</option>
-                                        <option value="">Copy to...</option>
-                                        <option value="">Share to Commons</option>
+                    <div class="row">
+                        <nav class="col-md-3 d-md-block left-navigation text-danger">
+                            <ul>
+                                <li><a href="../Home/home.html">Home</a></li>
+                                <li><a href="#">Module</a></li>                        
+                                <li><a href="#">Piazza</a></li>
+                                <li><a href="#">Zoom Meetings</a></li>
+                                <li class="selected"><a href="../Assignments/index.html">Assignments</a></li>
+                                <li><a href="#">Quizzes</a></li>
+                                <li><a href="../Grades/grades.html">Grades</a></li>
+                                <li><a href="#">People</a></li>
+                                <li><a href="#">Panopto Video</a></li>
+                                <li><a href="#">Discussion</a></li>
+                                <li><a href="#">Announcements</a></li>
+                                <li><a href="#">Pages</a></li>
+                                <li><a href="#">Files</a></li>
+                                <li><a href="#">Rubrics</a></li>
+                                <li><a href="#">Outcomes</a></li>
+                                <li><a href="#">Collaborations</a></li>
+                                <li><a href="#">Syllabus</a></li>
+                                <li><a href="../Settings/course_details.html">Settings</a></li>
+                            </ul>
+                        </nav>
+                        <div class="col-md-9 right-content">
+                            <div class="row">
+                                <div class="col-7">
+                                    <input type="text" class="form-control margin-top input-text-width" placeholder="Search for Assignments" id="Assignment-Names">
+                                </div>
+                                <div class="col-5 margin-top">
+                                    <button type="button" class="btn btn-light float-right">
+                                        <i class="fas fa-ellipsis-v black-color"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger float-right">+Assignment</button>
+                                    <button type="button" class="btn btn-light float-right">+Group</button>    
+                                    
+                                    <div class="dropdown-menu ">
+                                        <button class="dropdown-item" type="button" id="edit-assignment-dates">Edit Assignment Dates</button>
+                                        <button class="dropdown-item" type="button" id="speed-grader">Speed Grader</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row margin-top-20">
+                                <div class="col-12 assignment-container d-flex align-items-center custom-background custom-right-padding height">
+                                    <div class="p-container custom-background set-heading">
+                                        <i class="fas fa-grip-vertical black-color"></i>
+                                        <p class="assignment-title mb-0 custom-font-size margin-left-5">ASSIGNMENTS</p>
+                                    </div>
+                                    <div class="custom-left-padding">
+                                        <button class="oval-button custom-background">40% of Total</button>
+                                        <button class="custom-background" style="border: 0;">+</button>
+                                        <i class="fas fa-ellipsis-v black-color"></i>
+                                    </div>
+                                        <!-- <div>
+                                            
+                                        </div>
+                                        <div class="btn-group custom-background">
+                                            
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <button class="dropdown-item" type="button" id="edit-assignment-dates">Edit</button>
+                                                <button class="dropdown-item" type="button" id="speed-grader">Speed Grader</button>
+                                                <button class="dropdown-item" type="button" id="duplicate">Duplicate</button>
+                                                <button class="dropdown-item" type="button" id="delete">Delete</button>
+                                                <button class="dropdown-item" type="button" id="move-to">Move To...</button>
+                                                <button class="dropdown-item" type="button" id="send-to">Send To...</button>
+                                                <button class="dropdown-item" type="button" id="copy-to">Copy To...</button>
+                                                <button class="dropdown-item" type="button" id="share-to-commons">Share to Commons</button>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="row left-border">
+                                <div class="d-flex align-items-center padding-top-10">
+                                    <div class="drag-handle margin-bottom-20" draggable="true">
+                                        <button type="button" class="left-button-setup">
+                                            <i class="fas fa-grip-vertical black-color"></i>
+                                        </button>
+                                        <button type="button" class="left-button-setup">
+                                            <i class="far fa-clipboard pad-color"></i>
+                                        </button>
+                                    </div>
+                                    <div>
+                                        <a href="../Assignments/AssignmentEditor/edit.html" class="set-font-style">A1 SETUP</a><br>
+                                        <p class="assignment-text">
+                                            week 0 - SETUP - Week starting Monday September 5th (09/05/2022) Module | <br>
+                                            <b>Due</b> Sept 18, 2022 at 11:59pm | 100 pts
+                                        </p>
+                                    </div>
+                                    <div class="margin-bottom-20 margin-left">
+                                        <button type="button" class="button-setup" disabled>
+                                            <i class="fas fa-check-circle correct-symbol"></i>
+                                        </button>
+                                        <button type="button" class="button-setup">
+                                            <i class="fas fa-ellipsis-v" ></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="row left-border">
+                                <div class="d-flex align-items-center">
+                                    <div class="drag-handle margin-bottom-20" draggable="true">
+                                        <button type="button" class="left-button-setup">
+                                            <i class="fas fa-grip-vertical black-color"></i>
+                                        </button>
+                                        <button type="button" class="left-button-setup">
+                                            <i class="far fa-clipboard pad-color"></i>
+                                        </button>
+                                    </div>
+                                    <div>
+                                        <a href="../Assignments/AssignmentEditor/edit.html" class="set-font-style">A2 HTML</a><br>
+                                        <p class="assignment-text">
+                                            week 1 - HTML - Week starting Monday September 12th (09/12/2022) Module | <br>
+                                            <b>Due</b> September 25, 2022 at 11:59pm | 100 pts
+                                        </p>
+                                    </div>
+                                    <div class="margin-bottom-20 margin-left">
+                                        <button type="button" class="button-setup" disabled>
+                                            <i class="fas fa-check-circle correct-symbol"></i>
+                                        </button>
+                                        <button type="button" class="button-setup">
+                                            <i class="fas fa-ellipsis-v black-color"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="row left-border">
+                                <div class="d-flex align-items-center">
+                                    <div class="drag-handle margin-bottom-20" draggable="true">
+                                        <button type="button" class="left-button-setup">
+                                            <i class="fas fa-grip-vertical black-color"></i>
+                                        </button>
+                                        <button type="button" class="left-button-setup">
+                                            <i class="far fa-clipboard pad-color"></i>
+                                        </button>
+                                    </div>
+                                    <div>
+                                        <a href="../Assignments/AssignmentEditor/edit.html" class="set-font-style">A3 CSS</a><br>
+                                        <p class="assignment-text">
+                                            week 2 - CSS - Week starting Monday September 19th (09/19/2022) Module | <br>
+                                            <b>Due</b> Oct 2, 2022 at 11:59pm | 100 pts
+                                        </p>
+                                    </div>
+                                    <div class="margin-bottom-20 margin-left">
+                                        <button type="button" class="button-setup" disabled>
+                                            <i class="fas fa-check-circle correct-symbol"></i>
+                                        </button>
+                                        <button type="button" class="button-setup">
+                                            <i class="fas fa-ellipsis-v black-color"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="row left-border">
+                                <div class="d-flex align-items-center">
+                                    <div class="drag-handle margin-bottom-20" draggable="true">
+                                        <button type="button" class="left-button-setup">
+                                            <i class="fas fa-grip-vertical black-color"></i>
+                                        </button>
+                                        <button type="button" class="left-button-setup">
+                                            <i class="far fa-clipboard pad-color"></i>
+                                        </button>
+                                    </div>
+                                    <div>
+                                        <a href="../Assignments/AssignmentEditor/edit.html" class="set-font-style">A4 BOOTSTRAP</a><br>
+                                        <p class="assignment-text">
+                                            week 3 - Bootstrap - Week starting Monday September 26th (09/26/2022) Module | <br>
+                                            <b>Due</b> Oct 10, 2022 at 11:59pm | 100 pts
+                                        </p>
+                                    </div>
+                                    <div class="margin-bottom-20 margin-left">
+                                        <button type="button" class="button-setup" disabled>
+                                            <i class="fas fa-check-circle correct-symbol"></i>
+                                        </button>
+                                        <button type="button" class="button-setup">
+                                            <i class="fas fa-ellipsis-v black-color"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="row left-border">
+                                <div class="d-flex align-items-center">
+                                    <div class="drag-handle margin-bottom-20" draggable="true">
+                                        <button type="button" class="left-button-setup">
+                                            <i class="fas fa-grip-vertical black-color"></i>
+                                        </button>
+                                        <button type="button" class="left-button-setup">
+                                            <i class="far fa-clipboard pad-color"></i>
+                                        </button>
+                                    </div>
+                                    <div>
+                                        <a href="../Assignments/AssignmentEditor/edit.html" class="set-font-style">A5 JAVASCRIPT</a><br>
+                                        <p class="assignment-text">
+                                            week 4 - JavaScript - Week starting Monday October 3rd (10/03/2022) Module | <br>
+                                            <b>Due</b> Oct 16, 2022 at 11:59pm | 100 pts
+                                        </p>
+                                    </div>
+                                    <div class="margin-bottom-20 margin-left">
+                                        <button type="button" class="button-setup" disabled>
+                                            <i class="fas fa-check-circle correct-symbol"></i>
+                                        </button>
+                                        <button type="button" class="button-setup">
+                                            <i class="fas fa-ellipsis-v black-color"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="row left-border">
+                                <div class="d-flex align-items-center">
+                                    <div class="drag-handle margin-bottom-20" draggable="true">
+                                        <button type="button" class="left-button-setup">
+                                            <i class="fas fa-grip-vertical black-color"></i>
+                                        </button>
+                                        <button type="button" class="left-button-setup">
+                                            <i class="far fa-clipboard pad-color"></i>
+                                        </button>
+                                    </div>
+                                    <div>
+                                        <a href="../Assignments/AssignmentEditor/edit.html" class="set-font-style">A6 REACT</a><br>
+                                        <!-- <a href="#">Multiple Modules</a> | Not available yet -->
+                                        <p class="assignment-text">
+                                            week 5 - React & Routing - Week starting Monday October 10th (10/10/2022) Module | <br>
+                                            <b>Due</b> Oct 23, 2022 at 11:59pm | 100 pts
+                                        </p>
+                                    </div>
+                                    <div class="margin-bottom-20 margin-left">
+                                        <button type="button" class="button-setup" disabled>
+                                            <i class="fas fa-check-circle correct-symbol"></i>
+                                        </button>
+                                        <button type="button" class="button-setup">
+                                            <i class="fas fa-ellipsis-v black-color"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>   
+                            <div class="row margin-top-30">
+                                <h2>QUIZZES 10% of Total
+                                    <select id="assignment-dropdown-2">
+                                        <option value="EDIT" selected>Edit</option>
+                                        <option value="SPEED-GRADER">Speed Grader</option>
+                                        <option value="DUPLICATE">Duplicate</option>
+                                        <option value="DELETE">Delete</option>
+                                        <option value="MOVE-TO">Move To...</option>
+                                        <option value="SEND-TO">Send To...</option>
+                                        <option value="COPY-TO">Copy To...</option>
+                                        <option value="SHARE-TO-COMMONS">Share to Commons</option>
                                     </select>
-                                </td>
-                            </tr>
-                        </table>
-                        <ul>
-                            <li><a href="../Assignments/AssignmentEditor/edit.html">A1 - ENV + HTML Multiple Modules</a> | Not available yet</li>
-                            <li><a href="../Assignments/AssignmentEditor/edit.html">A2 - CSS + BOOTSTRAP Multiple Modules</a> | Not available yet</li>
-                            <li><a href="../Assignments/AssignmentEditor/edit.html">A3 - JS + REACT Multiple Modules</a> | Not available yet</li>
-                            <li><a href="../Assignments/AssignmentEditor/edit.html">A4 - STATE + REDUX Multiple Modules</a> | Not available yet</li>
-                            <li><a href="../Assignments/AssignmentEditor/edit.html">A5 - NODE + SESSION Multiple Modules</a> | Not available yet</li>
-                            <li><a href="../Assignments/AssignmentEditor/edit.html">A6 - MONGO + MONGOOSE Multiple Modules</a> | Not available yet</li>
-                        </ul>
-                        <table>
-                            <tr valign="baseline">
-                                <th>
-                                    QUIZZES 10% of Total
-                                </th>
-                                <td>
-                                    <select>
-                                        <option value="">Edit</option>
-                                        <option value="">Speed Grader</option>
-                                        <option value="">Duplicate</option>
-                                        <option value="">Delete</option>
-                                        <option value="">Move to...</option>
-                                        <option value="">Send to..</option>
-                                        <option value="">Copy to...</option>
-                                        <option value="">Share to Commons</option>
+                                </h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Q1 - HTML</a><br>
+                                        <a href="#">Multiple Modules</a> | Not available yet
+                                    </li>
+                                    <li>
+                                        <a href="#">Q2 - CSS</a><br>
+                                        <a href="#">Multiple Modules</a> | Not available yet
+                                    </li>
+                                    <li>
+                                        <a href="#">Q3 - JS, ES6</a><br>
+                                        <a href="#">Multiple Modules</a> | Not available yet
+                                    </li>
+                                    <li>
+                                        <a href="#">Q4 - NODE</a><br>
+                                        <a href="#">Multiple Modules</a> | Not available yet
+                                    </li>
+                                    <li>
+                                        <a href="#">Q5 - MONGO</a><br>
+                                        <a href="#">Multiple Modules</a> | Not available yet
+                                    </li>   
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <h2>EXAMS 20% of Total
+                                    <select id="assignment-dropdown-3">
+                                        <option value="EDIT" selected>Edit</option>
+                                        <option value="SPEED-GRADER">Speed Grader</option>
+                                        <option value="DUPLICATE">Duplicate</option>
+                                        <option value="DELETE">Delete</option>
+                                        <option value="MOVE-TO">Move To...</option>
+                                        <option value="SEND-TO">Send To...</option>
+                                        <option value="COPY-TO">Copy To...</option>
+                                        <option value="SHARE-TO-COMMONS">Share to Commons</option>
                                     </select>
-                                </td>
-                            </tr>
-                        </table>
-                        <ul>
-                            <li><a href="#">Q1 - HTML Multiple Modules</a> | Not available yet</li>
-                            <li><a href="#">Q2 - CSS Multiple Modules</a> | Not available yet</li>
-                            <li><a href="#">Q3 - JS ES6 Multiple Modules</a> | Not available yet</li>
-                            <li><a href="#">Q4 - NODE Multiple Modules</a> | Not available yet</li>
-                            <li><a href="#">Q5 - MONGO Multiple Modules</a> | Not available yet</li>
-                        </ul>
-                        <table>
-                            <tr valign="baseline">
-                                <th>
-                                    EXAMS 20% of Total
-                                </th>
-                                <td>
-                                    <select>
-                                        <option value="">Edit</option>
-                                        <option value="">Speed Grader</option>
-                                        <option value="">Duplicate</option>
-                                        <option value="">Delete</option>
-                                        <option value="">Move to...</option>
-                                        <option value="">Send to..</option>
-                                        <option value="">Copy to...</option>
-                                        <option value="">Share to Commons</option>
+                                </h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Midterm</a><br>
+                                        <a href="#">Multiple Modules</a> | Not available yet
+                                    </li>
+                                    <li>
+                                        <a href="#">Final</a><br>
+                                        <a href="#">Multiple Modules</a> | Not available yet
+                                    </li>   
+                                </ul>
+                            </div>
+                            <div class="row">                   
+                                <h2>PROJECT 30% of Total
+                                    <select id="assignment-dropdown-4">
+                                        <option value="EDIT" selected>Edit</option>
+                                        <option value="SPEED-GRADER">Speed Grader</option>
+                                        <option value="DUPLICATE">Duplicate</option>
+                                        <option value="DELETE">Delete</option>
+                                        <option value="MOVE-TO">Move To...</option>
+                                        <option value="SEND-TO">Send To...</option>
+                                        <option value="COPY-TO">Copy To...</option>
+                                        <option value="SHARE-TO-COMMONS">Share to Commons</option>
                                     </select>
-                                </td>
-                            </tr>
-                        </table>
-                        <ul>
-                            <li><a href="#">Midterm Multiple Modules</a> | Not available yet</li>
-                            <li><a href="#">Final Multiple Modules</a> | Not available yet</li>
-                        </ul>
-                        <table>
-                            <tr valign="baseline">
-                                <th>
-                                    PROJECT 30% of Total
-                                </th>
-                                <td>
-                                    <select>
-                                        <option value="">Edit</option>
-                                        <option value="">Speed Grader</option>
-                                        <option value="">Duplicate</option>
-                                        <option value="">Delete</option>
-                                        <option value="">Move to...</option>
-                                        <option value="">Send to..</option>
-                                        <option value="">Copy to...</option>
-                                        <option value="">Share to Commons</option>
-                                    </select>
-                                </td>
-                            </tr>
-                        </table>
-                        <ul>
-                            <li><a href="#">Project Multiple Modules</a> | Not available yet</li>
-                        </ul>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+                                </h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Project</a><br>
+                                        <a href="#">Multiple Modules</a> | Not available yet
+                                    </li>  
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
 </body>
 </html>

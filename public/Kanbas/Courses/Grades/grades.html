@@ -3,170 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grades</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" />
+    <title>Grades Page</title>
 </head>
 <body>
-    <table>
-        <tr valign="baseline">
-            <!-- First Column - Kanbas Navigation -->
-            <td>
-                <ul>
-                    <li><a href="../../KanbasNavigation/account.html">Account</a></li>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Courses</a></li>
-                    <li><a href="#">Calendar</a></li>
-                    <li><a href="#">Inbox</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Studio</a></li>
-                    <li><a href="#">Commons</a></li>
-                    <li><a href="#">Help</a></li>
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar">
+                <div class="sidebar-logo">
+                    <img src="../../../images/northeastern.jpg" alt="Company Logo" width="80">
+                </div>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../KanbasNavigation/account.html">
+                            <i class="fas fa-user-circle act"></i>
+                            <span class="menu-text">Account</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../Dashboard/dashboard.html">
+                            <i class="fas fa-tachometer-alt text-danger"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../../KanbasNavigation/courses.html">
+                            <i class="fas fa-book text-danger"></i>
+                            Courses
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-calendar-alt text-danger"></i>
+                            Calendar
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-envelope-open-text text-danger"></i>
+                            Inbox
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="far fa-clock text-danger"></i>
+                            History
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-tv text-danger"></i>
+                            Studio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-arrow-circle-right text-danger"></i>
+                            Commons
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-question-circle text-danger"></i>
+                            Help
+                        </a>
+                    </li>
                 </ul>
-            </td>
+            </nav>
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                <div class="content-wrapper">
+                    <div class="top-section">
+                        <div class="menu-icon">
+                            <i class="fas fa-bars text-danger"></i>
+                        </div>
+                        <div class="profile-name">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#" class="text-danger" style="text-decoration: none;">CS5610.12631.202410</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Grades</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <nav class="col-md-3 d-md-block left-navigation text-danger">
+                            <ul>
+                                <li><a href="../Home/home.html">Home</a></li>
+                                <li><a href="#">Modules</a></li>
+                                <li><a href="#">Piazza</a></li>
+                                <li><a href="#">Zoom Meetings</a></li>
+                                <li><a href="../Assignments/index.html">Assignments</a></li>
+                                <li><a href="#">Quizzes</a></li>
+                                <li class="selected"><a href="grades.html">Grades</a></li>
+                                <li><a href="#">People</a></li>
+                                <li><a href="#">Panopto Video</a></li>
+                                <li><a href="#">Discussions</a></li>
+                                <li><a href="#">Announcements</a></li>
+                                <li><a href="#">Pages</a></li>
+                                <li><a href="#">Files</a></li>
+                                <li><a href="#">Rubrics</a></li>
+                                <li><a href="#">Outcomes</a></li>
+                                <li><a href="#">Collaborations</a></li>
+                                <li><a href="#">Syllabus</a></li>
+                                <li><a href="../Settings/course_details.html">Settings</a></li>
+                            </ul>
+                        </nav>
+                        <div class="col-md-9 right-content">
+                            <!-- Content here ----------------- -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <div style="float: right;">
+                                        <button type="button" class="btn btn-light">
+                                            <i class="fas fa-file-import" style="color: #000000;"></i> Import
+                                        </button>
+                                        <button type="button" class="btn btn-light">
+                                            <i class="fas fa-file-export" style="color: #000000;"></i> Export
+                                        </button>
+                                        <button type="button" class="btn btn-light">
+                                            <i class="fas fa-cog" style="color: #000000;"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="Assignment-Names"><b>Assignment Names</b></label>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="Student-Names"><b>Student Names</b></label>
+                                </div>
+                            </div>
+                            
+                            <div class="row" style="margin-top: 5px;">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Search Assignments" id="Assignment-Names">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Search Students" id="Student-Names">
+                                </div>
+                            </div>
 
-            <!-- Second Column - Course Navigation -->
-            <td>
-                <ul>
-                    <li><a href="../Home/home.html">Home</a></li>
-                    <li><a href="#">Modules</a></li>
-                    <li><a href="#">Piazza</a></li>
-                    <li><a href="#">Zoom Meetings</a></li>
-                    <li><a href="../Assignments/index.html">Assignments</a></li>
-                    <li><a href="#">Quizzes</a></li>
-                    <li><a href="grades.html">Grades</a></li>
-                    <li><a href="#">People</a></li>
-                    <li><a href="#">Panopto Video</a></li>
-                    <li><a href="#">Discussions</a></li>
-                    <li><a href="#">Announcements</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li><a href="#">Files</a></li>
-                    <li><a href="#">Rubrics</a></li>
-                    <li><a href="#">Outcomes</a></li>
-                    <li><a href="#">Collaborations</a></li>
-                    <li><a href="#">Syllabus</a></li>
-                    <li><a href="../Settings/course_details.html">Settings</a></li>
-                </ul>
-            </td>
+                            <div class="row" style="margin-top: 20px;">
+                                <div class="col-3">
+                                    <button type="button" class="btn btn-light"><i class="fas fa-filter" style="color: #000000;"></i> Apply Filter</button>
+                                </div>
+                            </div>
 
-            <!-- Third Column - Course Content -->
-            <td>
-                <table>
-                    <tr valign="baseline">
-                        <select>
-                            <option value="" disabled selected>Gradebook</option>
-                        </select>
-                        <button>Import</button>
-                        <select>
-                            <option value="" disabled selected>Export</option>
-                        </select>
-                        <button>Configure</button>
-                    </tr>
-                    <tr valign="baseline">
-                        <h4>Student Names</h4>
-                        <input type="text" id="search" placeholder="Search Students">
-                    </tr>
-                    <tr>
-                        <h4>Assignment Names</h4>
-                        <input type="text" id="search_assignments" placeholder="Search Assignments">
-                    </tr>
-                    <br>
-                    <br>
-                    <tr>
-                        <button>Apply Filters</button>
-                    </tr>
-                    <br>
-                    <br>
-                    <tr valign="baseline">
-                        <table border="1px">
-                            <tr>
-                                <th>Student Name</th>
-                                <th>A1 SETUP Out of 100</th>
-                                <th>A2 HTML Out of 100</th>
-                                <th>A3 CSS Out of 100</th>
-                                <th>A4 BOOTSTRAP Out of 100</th>
-                                <th>A5 JAVASCRIPT Out of 100</th>
-                                <th>A6 REACT Out of 100</th>
-                                <th>A7 REDUX Out of 100</th>
-                                <th>A8 NODE Out of 100</th>
-                                <th>A9 MONGO Out of 100</th>
-                            </tr>
-                            <tr>
-                                <td>Alice Wonderland</td>
-                                <td>98</td>
-                                <td>95</td>
-                                <td>89</td>
-                                <td>92</td>
-                                <td>93</td>
-                                <td>92</td>
-                                <td>94</td>
-                                <td>95</td>
-                                <td>96</td>
-                            </tr>
-                            <tr>
-                                <td>Bob Marley</td>
-                                <td>98</td>
-                                <td><input type="number" value="95" min="0" max="100"></td>
-                                <td>89</td>
-                                <td>92</td>
-                                <td>93</td>
-                                <td>92</td>
-                                <td><input type="number" value="94" min="0" max="100"></td>
-                                <td>95</td>
-                                <td>96</td>
-                            </tr>
-                            <tr>
-                                <td>Chris Evans</td>
-                                <td>98</td>
-                                <td><input type="number" value="95" min="0" max="100"></td>
-                                <td>89</td>
-                                <td>92</td>
-                                <td>93</td>
-                                <td>92</td>
-                                <td><input type="number" value="94" min="0" max="100"></td>
-                                <td>95</td>
-                                <td>96</td>
-                            </tr>
-                            <tr>
-                                <td>Harry Potter</td>
-                                <td>98</td>
-                                <td><input type="number" value="95" min="0" max="100"></td>
-                                <td>89</td>
-                                <td>92</td>
-                                <td>93</td>
-                                <td>92</td>
-                                <td><input type="number" value="94" min="0" max="100"></td>
-                                <td>95</td>
-                                <td>96</td>
-                            </tr>
-                            <tr>
-                                <td>Captain Marvel</td>
-                                <td>98</td>
-                                <td>93</td>
-                                <td><input type="number" value="95" min="0" max="100"></td>
-                                <td>89</td>
-                                <td>92</td>
-                                <td>92</td>
-                                <td><input type="number" value="94" min="0" max="100"></td>
-                                <td>95</td>
-                                <td>96</td>
-                            </tr>
-                            <tr>
-                                <td>Iron Man</td>
-                                <td>98</td>
-                                <td><input type="number" value="95" min="0" max="100"></td>
-                                <td>89</td>
-                                <td>92</td>
-                                <td>93</td>
-                                <td><input type="number" value="94" min="0" max="100"></td>
-                                <td>95</td>
-                                <td>92</td>
-                                <td>96</td>
-                            </tr>
-                        </table>
-                    </tr>
-                    
-                </table>
-            </td>
-        </tr>
-    </table>
+                            <div class="table-responsive">
+                                <table class="table table-stripped custom-table">
+                                    <tr>
+                                        <th>Student Name</th>
+                                        <th>A1 SETUP Out of 100</th>
+                                        <th>A2 HTML Out of 100</th>
+                                        <th>A3 CSS Out of 100</th>
+                                        <th>A4 BOOTSTRAP Out of 100</th>
+                                        <th>A5 JAVASCRIPT Out of 100</th>
+                                        <th>A6 REACT Out of 100</th>
+                                        <th>A7 REDUX Out of 100</th>
+                                        <th>A8 NODE Out of 100</th>
+                                        <th>A9 MONGO Out of 100</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-danger">Alice Wonderland</td>
+                                        <td align="center">98</td>
+                                        <td align="center">95</td>
+                                        <td align="center">89</td>
+                                        <td align="center">92</td>
+                                        <td align="center">93</td>
+                                        <td align="center">92</td>
+                                        <td align="center">94</td>
+                                        <td align="center">95</td>
+                                        <td align="center">96</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-danger">Bob Marley</td>
+                                        <td align="center">98</td>
+                                        <td align="center"><input type="number" id="inp-1" placeholder="out of 100" value="95"></td>
+                                        <td align="center">89</td>
+                                        <td align="center">92</td>
+                                        <td align="center">93</td>
+                                        <td align="center">92</td>
+                                        <td align="center"><input type="number" id="inp-1" placeholder="out of 100" value="94"></td>
+                                        <td align="center">95</td>
+                                        <td align="center">96</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-danger">Chris Evans</td>
+                                        <td align="center">98</td>
+                                        <td align="center"><input type="number" id="inp-1" placeholder="out of 100" value="94"></td>
+                                        <td align="center">89</td>
+                                        <td align="center">92</td>
+                                        <td align="center">93</td>
+                                        <td align="center">92</td>
+                                        <td align="center"><input type="number" id="inp-1" placeholder="out of 100" value="95"></td>
+                                        <td align="center">95</td>
+                                        <td align="center">96</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-danger">Harry Potter</td>
+                                        <td align="center">98</td>
+                                        <td align="center"><input type="number" id="inp-1" placeholder="out of 100" value="94"></td>
+                                        <td align="center">89</td>
+                                        <td align="center">92</td>
+                                        <td align="center">93</td>
+                                        <td align="center">92</td>
+                                        <td align="center"><input type="number" id="inp-1" placeholder="out of 100" value="95"></td>
+                                        <td align="center">95</td>
+                                        <td align="center">96</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-danger">Captain Marvel</td>
+                                        <td align="center">98</td>
+                                        <td align="center">93</td>
+                                        <td align="center"><input type="number" id="inp-1" placeholder="out of 100" value="95"></td>
+                                        <td align="center">89</td>
+                                        <td align="center">92</td>
+                                        <td align="center">92</td>
+                                        <td align="center"><input type="number" id="inp-1" placeholder="out of 100" value="94"></td>
+                                        <td align="center">95</td>
+                                        <td align="center">96</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-danger">Iron Man</td>
+                                        <td align="center">98</td>
+                                        <td align="center"><input type="number" id="inp-1" placeholder="out of 100" value="93"></td>
+                                        <td align="center">89</td>
+                                        <td align="center">92</td>
+                                        <td align="center">93</td>
+                                        <td align="center"><input type="number" id="inp-1" placeholder="out of 100" value="94"></td>
+                                        <td align="center">95</td>
+                                        <td align="center">92</td>
+                                        <td align="center">96</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
 </body>
 </html>
