@@ -14,8 +14,8 @@ function Assignment3() {
         <ConditionalOutput/>
         <Styles/>
         <Classes/>
-        <JavaScript/>
         <PathParameters/>
+        <JavaScript/>
       </div>
     );
   }
