@@ -22,7 +22,7 @@ function Courses({courses}) {
                 <div class="profile-name">
                     <nav aria-label="breadcrumb" style={{marginTop: '20px'}}>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#" class="text-danger" style={{textDecoration: 'none'}}>{course.name}</a></li>
+                            <li class="breadcrumb-item"><a href="#" class="text-danger" style={{textDecoration: 'none'}}>{course ? course.name : courseId}</a></li>
                             <li class="breadcrumb-item active" aria-current="page">{pageName}</li>
                         </ol>
                     </nav>

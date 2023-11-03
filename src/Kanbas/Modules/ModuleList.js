@@ -68,7 +68,6 @@ function ModuleList() {
                                     Update
                                 </button>
                             </li>
-
                             {modules.filter((module) => module.course === courseId)
                             .map((module,index) => (
                                 <li class="list-group-item list-group-item-secondary" style={{marginBottom: 40}}>

@@ -1,10 +1,21 @@
 import { FaCalendarAlt, FaCaretRight, FaCheck, FaCheckCircle, FaCircle, FaEllipsisV, FaFileCode, FaPlus, FaTimes } from 'react-icons/fa';
 import { useParams } from "react-router-dom";
 import db from '../../Database';
+import {
+    addModule,
+    deleteModule,
+    updateModule,
+    setModule,
+  } from "../../Modules/modulesReducer";
+  import { useState } from 'react';
+import { useSelector, useDispatch } from "react-redux";
+import modulesReducer from '../../Modules/modulesReducer';
 
 function Home() {
     const { courseId } = useParams();
-    const modules = db.modules;
+    const modules = useSelector((state) => state.modulesReducer.modules);
+    const module = useSelector((state) => state.modulesReducer.module);
+    const dispatch = useDispatch();
     return (
         <div>
             <main role="main" class="col-md-12 ml-sm-auto col-lg-12 px-md-4">
@@ -35,6 +46,26 @@ function Home() {
                         <hr/>
                         <div class="mb-3">
                         <ul class="list-group module-groups">
+                        <li className="list-group-item">
+                                <div className='row'>
+                                    <div className='row'>
+                                        <input value={module.name}
+                                        onChange={(e) => dispatch(setModule({ ...module, name: e.target.value }))}
+                                        />
+                                    </div>
+                                    <div className='row'>
+                                    <textarea value={module.description}
+                                        onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))}
+                                        />
+                                    </div>
+                                </div>
+                                <button className='btn btn-success' onClick={() => { dispatch(addModule({ ...module, course: courseId })) }}>
+                                    Add
+                                </button>
+                                <button className='btn btn-primary' onClick={() => {dispatch(updateModule(module))}}>
+                                    Update
+                                </button>
+                            </li>
                             {modules.filter((module) => module.course === courseId)
                             .map((module,index) => (
                                 <li class="list-group-item list-group-item-secondary" style={{marginBottom: 40}}>

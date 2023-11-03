@@ -3,7 +3,7 @@ import KanbasNavigation from "./KanbasNavigation";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
 import { useState } from "react";
-import db from '../Kanbas/Database';
+import db from "./Database";
 import { Provider } from "react-redux";
 import store from "./store";
 function Kanbas() {

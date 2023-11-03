@@ -11,6 +11,7 @@ import PassingDataOnEvent from "./PassingDataOnEvent";
 import PassingFunctions from "./PassingFunctions";
 import ReduxExamples from "./ReduxExamples";
 import TodoList from "./ReduxExamples/todos/TodoList";
+import StringStateVariables from "./StringStateVariables";
 
 const Assignment4 = () => {
     function sayHello() {
@@ -26,6 +27,7 @@ const Assignment4 = () => {
             <EventObject/>
             <Counter/>
             <BooleanStateVariables/>
+            <StringStateVariables/>
             <DateStateVariable/>
             <ObjectStateVariable/>
             <ArrayStateVariable/>
