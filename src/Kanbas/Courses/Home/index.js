@@ -6,13 +6,35 @@ import {
     deleteModule,
     updateModule,
     setModule,
+    setModules,
   } from "../../Modules/modulesReducer";
-  import { useState } from 'react';
+  import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import modulesReducer from '../../Modules/modulesReducer';
+import * as client from "../../Modules/client";
 
 function Home() {
     const { courseId } = useParams();
+    useEffect(() => {
+        client.findModulesForCourse(courseId)
+          .then((modules) =>
+            dispatch(setModules(modules))
+        );
+      }, [courseId]);    
+    const handleAddModule = () => {
+    client.createModule(courseId, module).then((module) => {
+        dispatch(addModule(module));
+    });
+    };   
+    const handleDeleteModule = (moduleId) => {
+        client.deleteModule(moduleId).then((status) => {
+          dispatch(deleteModule(moduleId));
+        });
+    };   
+    const handleUpdateModule = async () => {
+        const status = await client.updateModule(module);
+        dispatch(updateModule(module));
+    }; 
     const modules = useSelector((state) => state.modulesReducer.modules);
     const module = useSelector((state) => state.modulesReducer.module);
     const dispatch = useDispatch();
@@ -59,10 +81,10 @@ function Home() {
                                         />
                                     </div>
                                 </div>
-                                <button className='btn btn-success' onClick={() => { dispatch(addModule({ ...module, course: courseId })) }}>
+                                <button className='btn btn-success' onClick={handleAddModule}>
                                     Add
                                 </button>
-                                <button className='btn btn-primary' onClick={() => {dispatch(updateModule(module))}}>
+                                <button className='btn btn-primary' onClick={() => handleUpdateModule(module)}>
                                     Update
                                 </button>
                             </li>
