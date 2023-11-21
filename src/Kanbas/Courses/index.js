@@ -6,13 +6,26 @@ import { FaGlasses } from 'react-icons/fa';
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-function Courses({courses}) {
+function Courses() {
     const { courseId } = useParams();
     const location = useLocation();
     const parts = location.pathname.split('/');
     const pageName = parts[parts.length - 1];
-    const course = courses.find((course) => course._id === courseId);
+    const API_BASE = process.env.REACT_APP_API_BASE;
+    const URL = `${API_BASE}/api/courses`;
+    const [course, setCourse] = useState({});
+    const findCourseById = async (courseId) => {
+        const response = await axios.get(
+        `${URL}/${courseId}`
+        );
+        setCourse(response.data);
+    };
+    useEffect(() => {
+        findCourseById(courseId);
+    }, [courseId]);
     return (
         <div style={{width: '1100px'}}>
             <div class="top-section" style={{width: '1100px', display: 'flex'}}>

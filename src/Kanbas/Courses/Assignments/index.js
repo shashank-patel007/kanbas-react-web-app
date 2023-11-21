@@ -1,15 +1,21 @@
 import { useNavigate, useParams } from "react-router";
-import db from '../../Database';
 import { FaCheckCircle, FaClipboard, FaEllipsisV, FaGripVertical } from "react-icons/fa";
 import 'bootstrap/dist/css/bootstrap.css';
 import './styles.css';
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
-import { deleteAssignment } from "./assignmentsReducer";
+import { useState, useEffect } from "react";
+import { deleteAssignment, setAssignments } from "./assignmentsReducer";
+import * as client from "./client";
 
 function Assignments() {
     const {courseId} = useParams();
+    useEffect(() => {
+        client.findAssignmentsForCourse(courseId)
+          .then((assignments) =>
+            dispatch(setAssignments(assignments))
+        );
+    }, [courseId]);    
     const navigate = useNavigate();
     const assignments = useSelector((state) => state.assignmentsReducer.assignments);
     const courseAssignments = assignments.filter(
@@ -35,6 +41,13 @@ function Assignments() {
     const createNewAssignment = () => {
         navigate(`/Kanbas/Courses/${courseId}/Assignments/new`);
     };
+
+    const handleDeleteAssignment = (assignmentId) => {
+        client.deleteAssignment(assignmentId).then((status) => {
+          dispatch(deleteAssignment(assignmentId));
+        });
+    };
+    
     
     return (
         <div style={{marginLeft: 5, width: 1100}}>
@@ -97,7 +110,7 @@ function Assignments() {
                             </p>
                         </div>
                         <div className="margin-bottom-20 margin-left">
-                            <button className='btn btn-danger' onClick={() => setdeleteAssignment(assignment._id)}>Delete</button>
+                            <button className='btn btn-danger' onClick={() => handleDeleteAssignment(assignment._id)}>Delete</button>
                             <button type="button" className="button-setup" disabled>
                                 <FaCheckCircle className="correct-symbol"/>
                             </button>
